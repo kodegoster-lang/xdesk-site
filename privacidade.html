@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade · XDesk</title>
+<link rel="icon" href="icone.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="./"><img src="icone.svg" alt="">XDesk</a><nav><a href="termos.html">Termos de Uso</a><a href="privacy.html" hreflang="en">English</a></nav></div></header>
+<main class="wrap">
+<h1>Política de Privacidade</h1>
+<p class="meta">Versão 1.0 · Em vigor desde 26/11/2026</p>
+<h2>1. Sobre o XDesk</h2>
+<p>O XDesk é um programa de acesso remoto para Windows 10 e 11, vendido por assinatura na Microsoft Store. Ele permite acessar computadores pela internet ou pela rede local. O XDesk não tem conta nem cadastro próprios, não mostra anúncios e não coleta dados para terceiros.</p>
+<p>As conexões pela internet usam um servidor próprio do desenvolvedor (servidor de ID e relay), localizado no Brasil e acessado pelo endereço xdesk.ddns.net. Nenhum dado das sessões passa por servidores de terceiros.</p>
+<h3>1.1 Papéis</h3>
+<ul>
+<li><strong>Desenvolvedor e controlador:</strong> Jeferson Y Castro de Oliveira, pessoa física, que desenvolve e vende o XDesk e opera o servidor. É quem decide como os dados são tratados.</li>
+<li><strong>Usuário:</strong> quem usa o programa para acessar um computador ou para ser acessado.</li>
+<li><strong>Assinante:</strong> o usuário que paga a assinatura para acessar outros computadores.</li>
+<li><strong>Microsoft:</strong> vende o XDesk pela Microsoft Store e processa o pagamento, sob a política de privacidade dela.</li>
+<li><strong>Uso profissional:</strong> quem usa o XDesk para atender clientes (por exemplo, um técnico) é o controlador dos dados desses clientes.</li>
+</ul>
+<h3>1.2 Contato e encarregado</h3>
+<p>Pessoas físicas e agentes de pequeno porte não precisam indicar um encarregado (Resolução CD/ANPD nº 2/2022). Mesmo assim, há um canal para pedidos e dúvidas sobre privacidade e suporte: <strong><a href="mailto:kodego@hotmail.com">kodego@hotmail.com</a></strong>. Pedidos de privacidade são respondidos em até 15 dias, e pedidos de suporte em até 5 dias úteis.</p>
+<h3>1.3 Vigência e onde ler</h3>
+<ul>
+<li><strong>Em vigor desde:</strong> 26/11/2026</li>
+<li><strong>Versão do programa:</strong> 0.4.x</li>
+<li><strong>Onde ler:</strong> <a href="privacidade.html">kodegoster-lang.github.io/xdesk-site/privacidade.html</a> e <a href="termos.html">kodegoster-lang.github.io/xdesk-site/termos.html</a> e no próprio programa, em Configurações.</li>
+</ul>
+<h2>2. Política de Privacidade</h2>
+<p>O XDesk trata apenas os dados necessários para conectar dois computadores, e quase todos ficam no próprio computador. Esta política segue a Lei Geral de Proteção de Dados (Lei nº 13.709/2018, LGPD).</p>
+<h3>2.1 Quando a LGPD se aplica</h3>
+<p>Como o XDesk é vendido, a LGPD vale integralmente para todos os usuários. O XDesk é vendido apenas no Brasil.</p>
+<h3>2.2 Onde os dados ficam no computador</h3>
+<p>O XDesk usa duas pastas no Windows:</p>
+<ul>
+<li><strong>%APPDATA%\XDesk</strong> (pasta do usuário): lista de computadores, configurações e registros da janela. Sem instalação (programa aberto direto do .exe), tudo fica aqui.</li>
+<li><strong>C:\ProgramData\XDesk</strong> (só com o XDesk instalado como serviço): número do PC, senhas, histórico de acessos e registros do serviço. Essa pasta só é acessível ao sistema (SYSTEM) e a administradores.</li>
+</ul>
+<p>Arquivos colados (Ctrl+V) ficam na pasta onde o usuário colar. Arquivos arrastados para a janela de conexão são gravados na pasta Downloads do PC que recebe.</p>
+<h3>2.3 Dados tratados</h3>
+<div class="table"><table>
+<thead><tr><th>Dado</th><th>Onde fica</th><th>Para que serve</th><th>Por quanto tempo</th></tr></thead>
+<tbody>
+<tr><td>Número do PC (ID de 9 dígitos) e chave pública do PC</td><td>Servidor (ids.json) e no PC</td><td>Identificar o computador sempre com o mesmo número</td><td>Enquanto o servidor existir, ou até o titular pedir a exclusão</td></tr>
+<tr><td>Endereços IP (público e da rede local) e porta</td><td>Memória do servidor</td><td>Encontrar o outro PC, tentar conexão direta e, se não der, fazer o relay; limitar abusos por IP</td><td>Só enquanto o PC está online</td></tr>
+<tr><td>Registros do servidor: quando cada número fica online e offline, qual IP chamou qual número, início e fim de cada relay</td><td>Servidor</td><td>Segurança, prevenção de abusos e diagnóstico de falhas</td><td>6 meses</td></tr>
+<tr><td>Situação da assinatura (ativa ou não)</td><td>Consultada na Microsoft Store pelo próprio programa</td><td>Liberar o acesso a outros PCs</td><td>Não é guardada pelo desenvolvedor</td></tr>
+<tr><td>Impressão do computador: um hash (resumo irreversível) calculado a partir de identificadores da placa-mãe e do disco, junto com o número do PC. Os valores originais não são guardados, e o endereço MAC não é usado</td><td>Servidor</td><td>Impedir que o mesmo computador use o teste grátis mais de uma vez</td><td>Enquanto for necessário para esse fim, ou seja, enquanto o XDesk estiver à venda</td></tr>
+<tr><td>Identificador anônimo da conta Microsoft, guardado como hash (resumo irreversível), sem nome nem e-mail; junto dele, situação e validade da assinatura, se o teste grátis já foi usado e qual número de PC está com a sessão de acesso ativa</td><td>Servidor</td><td>Permitir uma sessão de acesso por vez por conta, um teste grátis por conta e o limite de assinaturas</td><td>Enquanto o XDesk estiver à venda (sessão ativa: só enquanto dura)</td></tr>
+<tr><td>E-mail de quem entra na lista de espera</td><td>Servidor</td><td>Avisar quando houver vaga para assinar</td><td>Até a pessoa ser avisada da vaga ou pedir para sair da lista</td></tr>
+<tr><td>Nome do computador</td><td>No PC que acessou e na lista da Rede local</td><td>Mostrar o nome nos cartões e no histórico</td><td>Até o computador ser removido da lista</td></tr>
+<tr><td>Lista de computadores (número, apelido, último acesso, tipo de conexão, latência)</td><td>%APPDATA%\XDesk\computadores.json</td><td>Mostrar os cartões e ordenar por recentes</td><td>Até o computador ser removido da lista</td></tr>
+<tr><td>Histórico de acessos recebidos (data, número e nome de quem acessou, tipo de senha, caminho, duração, se foi recusado) e de acessos feitos (data, número e nome do PC acessado, caminho, duração)</td><td>Recebidos: historico.json, no PC acessado. Feitos: %APPDATA%\XDesk\historico-saida.json</td><td>Permitir conferir os acessos feitos e recebidos</td><td>As 500 entradas mais recentes de cada lista; as mais antigas são apagadas</td></tr>
+<tr><td>Registros do programa (xdesk-conexao.log e xdesk-sistema.log): IP de quem conectou, caminho (direto ou relay), número de quem chamou, nome e caminho de arquivos recebidos. Nunca guardam o que é digitado</td><td>Nas duas pastas do XDesk</td><td>Diagnóstico de falhas</td><td>Cada arquivo vai até 2 MB; depois vira uma cópia antiga (.1), e a anterior é apagada</td></tr>
+<tr><td>Senha de acesso não assistido</td><td>Pasta do XDesk, guardada como hash (não como texto)</td><td>Permitir conexão sem confirmação</td><td>Até ser trocada ou removida</td></tr>
+<tr><td>Senha temporária</td><td>Pasta do XDesk</td><td>Permitir conexão com confirmação de quem está no PC</td><td>Troca todo dia e a cada reinício do Windows</td></tr>
+<tr><td>Imagem da tela, teclado e mouse</td><td>Só trafegam durante a sessão</td><td>Ver e controlar o computador remoto</td><td>Não são gravados</td></tr>
+<tr><td>Área de transferência (texto, imagem)</td><td>Só trafega durante a sessão</td><td>Copiar e colar entre os dois PCs</td><td>Não é gravada pelo XDesk</td></tr>
+<tr><td>Arquivos transferidos</td><td>Copiar e colar (Ctrl+C e Ctrl+V): trafegam durante a sessão e ficam onde o usuário colar. Arrastar e soltar na janela de conexão: gravados em Downloads do PC que recebe</td><td>Levar arquivos de um PC ao outro</td><td>Os arquivos colados ou recebidos ficam até o usuário apagá-los</td></tr>
+<tr><td>Configurações (tema, janela, senhas, confirmação)</td><td>Pastas do XDesk</td><td>Lembrar as preferências</td><td>Até serem apagadas</td></tr>
+</tbody></table></div>
+<p>O nome e o número de quem acessou são informados pelo próprio PC que chama e não são verificados. O histórico mostra o que o outro lado declarou.</p>
+<p>O XDesk não coleta telemetria, estatísticas de uso, relatórios de erro nem dados de localização, e não grava a sessão em vídeo. A Microsoft coleta dados de compra, pagamento, instalação e travamentos pela Microsoft Store, sob a política de privacidade dela. O desenvolvedor não recebe nome, e-mail nem dados de pagamento dos assinantes; vê apenas relatórios da Microsoft, como o total de assinaturas e de travamentos.</p>
+<h3>2.4 Como a conexão é protegida</h3>
+<ul>
+<li>A sessão entre os dois PCs é cifrada de ponta a ponta (SPAKE2 para a troca de chaves e ChaCha20-Poly1305 para os dados).</li>
+<li>A senha nunca é enviada ao servidor. Quando há relay, o servidor só repassa bytes cifrados e não consegue ver a tela, o teclado, a área de transferência nem os arquivos.</li>
+<li>O servidor limita tentativas por endereço IP, e o PC acessado recusa novas tentativas depois de algumas senhas erradas seguidas.</li>
+<li>A conexão direta só é aceita a partir da rede local. De fora, a conexão passa sempre pelo relay.</li>
+<li>Qualquer endereço IP pode perguntar ao servidor se um número está online. O servidor não informa o nome do PC.</li>
+<li>A busca na Rede local usa uma mensagem de difusão (UDP, porta 21118) que revela o número e o nome do PC para outros computadores da mesma rede.</li>
+</ul>
+<h3>2.5 Bases legais</h3>
+<p>Quando a LGPD se aplica, o tratamento se apoia em:</p>
+<ul>
+<li><strong>Execução de contrato</strong> (art. 7º, V): número do PC, IP, nome, situação da assinatura e dados da sessão, sem os quais o serviço contratado não funciona; e o e-mail da lista de espera, informado a pedido da própria pessoa antes de assinar.</li>
+<li><strong>Legítimo interesse</strong> (art. 7º, IX): histórico de acessos e registros, para a segurança do computador acessado, a prevenção de abusos e o diagnóstico de falhas; e impressão do computador, para que o teste grátis seja usado uma vez só por computador.</li>
+</ul>
+<p>A confirmação pedida a quem está diante do PC, nas conexões com senha temporária, é uma medida de segurança e não o consentimento da LGPD.</p>
+<h3>2.6 Compartilhamento</h3>
+<p>Os dados não são vendidos nem compartilhados. Eles circulam apenas entre os computadores conectados e o servidor do desenvolvedor, que fica no Brasil; não há transferência internacional feita pelo XDesk. A compra e o pagamento são feitos pela Microsoft, sob a política dela. O endereço xdesk.ddns.net é traduzido por um serviço de DNS dinâmico (No-IP), que vê só a consulta do nome, não os dados das sessões. Os dados só serão entregues a autoridades quando houver ordem legal.</p>
+<h3>2.7 Seus direitos</h3>
+<p>O titular pode pedir, pelo contato da seção 1.2 (LGPD, art. 18):</p>
+<ul>
+<li>confirmação de que há tratamento e acesso aos dados;</li>
+<li>correção de dados incompletos ou errados;</li>
+<li>anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desacordo com a lei;</li>
+<li>portabilidade;</li>
+<li>eliminação dos dados;</li>
+<li>informação sobre com quem os dados foram compartilhados;</li>
+<li>oposição a um tratamento feito em desacordo com a lei.</li>
+</ul>
+<p>Os pedidos são respondidos em até 15 dias (art. 19). O titular também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+<p>Boa parte disso pode ser feita no próprio programa:</p>
+<ul>
+<li><strong>Ver e exportar o histórico:</strong> em Segurança, o histórico pode ser exportado em CSV.</li>
+<li><strong>Remover um computador:</strong> pelo menu do cartão na lista.</li>
+<li><strong>Apagar tudo do PC:</strong> a desinstalação mantém C:\ProgramData\XDesk de propósito, para o PC manter o mesmo número se o XDesk for reinstalado. Para apagar tudo, desinstale e apague as pastas C:\ProgramData\XDesk e %APPDATA%\XDesk, além dos arquivos que tiver colado ou recebido em Downloads.</li>
+<li><strong>Apagar o número no servidor:</strong> pedir pelo e-mail de contato.</li>
+</ul>
+<h3>2.8 Incidentes de segurança</h3>
+<p>Se houver um incidente que possa causar risco ou dano relevante aos titulares, como o vazamento de dados do servidor, o desenvolvedor avisa a ANPD e os titulares em prazo razoável (art. 48). O aviso sai na página do XDesk e dentro do programa, e diz o que aconteceu, quais dados foram afetados e o que foi feito.</p>
+<h3>2.9 Dados de terceiros</h3>
+<p>Durante uma sessão, quem acessa pode ver na tela, ou receber em arquivos, dados de outras pessoas. Quem acessa responde pelo uso que fizer desses dados.</p>
+<h3>2.10 Menores de idade</h3>
+<p>O XDesk não é destinado a menores de 18 anos sem a supervisão de um responsável legal.</p>
+<h3>2.11 Alterações desta política</h3>
+<p>Se o programa passar a tratar dados novos, esta política será atualizada antes, com a nova data no topo do documento e uma linha no histórico de versões (seção 4). As mudanças são avisadas nas notas da nova versão do programa.</p>
+<h2>4. Histórico de versões</h2>
+<div class="table"><table>
+<thead><tr><th>Data</th><th>Versão do texto</th><th>Mudança</th></tr></thead>
+<tbody>
+<tr><td>26/11/2026</td><td>1.0</td><td>Primeira versão publicada</td></tr>
+</tbody></table></div>
+</main>
+<footer><div class="wrap">© 2026 Jeferson Y Castro de Oliveira. Todos os direitos reservados.</div></footer>
+</body>
+</html>
